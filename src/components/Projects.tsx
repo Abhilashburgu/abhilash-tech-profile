@@ -10,6 +10,7 @@ const Projects = () => {
       icon: Shield,
       technologies: ["Security Analysis", "Vulnerability Assessment", "Threat Detection"],
       color: "from-red-400 to-red-600",
+      githubUrl: "https://github.com/Abhilashburgu/Honeypot-based-security-approch",
       features: [
         "Advanced threat detection mechanisms",
         "Real-time hacker activity monitoring",
@@ -23,6 +24,7 @@ const Projects = () => {
       icon: FileText,
       technologies: ["Web Development", "Data Processing", "Administrative Systems"],
       color: "from-blue-400 to-blue-600",
+      githubUrl: null,
       features: [
         "Automated pass generation workflow",
         "Administrative approval system",
@@ -36,6 +38,7 @@ const Projects = () => {
       icon: Utensils,
       technologies: ["Automation", "Resource Management", "Social Impact"],
       color: "from-green-400 to-green-600",
+      githubUrl: "https://github.com/Abhilashburgu/Excess-food-mangment",
       features: [
         "Intelligent food redistribution",
         "Automated collection scheduling",
@@ -109,10 +112,17 @@ const Projects = () => {
                     <ExternalLink size={16} />
                     <span className="text-sm font-medium">View Details</span>
                   </button>
-                  <button className="flex items-center justify-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-                    <Github size={16} />
-                    <span className="text-sm font-medium">Code</span>
-                  </button>
+                  {project.githubUrl && (
+                    <a 
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors duration-200"
+                    >
+                      <Github size={16} />
+                      <span className="text-sm font-medium">Code</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
