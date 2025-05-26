@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Mail, Phone, Linkedin, Download, Github, ArrowRight, Star, Code, Zap } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 pt-20 relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 pt-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Floating Geometric Shapes */}
@@ -65,10 +62,9 @@ const Hero = () => {
             
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <button 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 py-4 rounded-xl hover:from-emerald-600 hover:to-blue-700 transition-all duration-300 font-bold hover:scale-105 shadow-2xl hover:shadow-emerald-500/25"
-              >
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 py-4 rounded-xl hover:from-emerald-600 hover:to-blue-700 transition-all duration-300 font-bold hover:scale-105 shadow-2xl hover:shadow-emerald-500/25">
                 <span className="flex items-center justify-center gap-2">
                   Get Started
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -83,28 +79,17 @@ const Hero = () => {
 
             {/* Quick Contact Links */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <a 
-                href="mailto:abhilashburgu27@gmail.com"
-                className="group flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 p-3 rounded-xl border border-white/20 hover:border-white/40"
-              >
+              <a href="mailto:abhilashburgu27@gmail.com" className="group flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 p-3 rounded-xl border border-white/20 hover:border-white/40">
                 <Mail size={20} />
                 <span className="hidden sm:inline font-medium">Email</span>
               </a>
               
-              <a 
-                href="tel:+918790033916"
-                className="group flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 p-3 rounded-xl border border-white/20 hover:border-white/40"
-              >
+              <a href="tel:+918790033916" className="group flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 p-3 rounded-xl border border-white/20 hover:border-white/40">
                 <Phone size={20} />
                 <span className="hidden sm:inline font-medium">Call</span>
               </a>
               
-              <a 
-                href="https://linkedin.com/in/abhilash-burgu-4453ba232"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 p-3 rounded-xl border border-white/20 hover:border-white/40"
-              >
+              <a href="https://linkedin.com/in/abhilash-burgu-4453ba232" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 p-3 rounded-xl border border-white/20 hover:border-white/40">
                 <Linkedin size={20} />
                 <span className="hidden sm:inline font-medium">LinkedIn</span>
               </a>
@@ -118,13 +103,11 @@ const Hero = () => {
               {/* Main Profile Circle */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
                 {/* Animated Border */}
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-blue-500 to-violet-500 rounded-full p-1 animate-spin" style={{ animationDuration: '8s' }}>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-blue-500 to-violet-500 rounded-full p-1 animate-spin" style={{
+                animationDuration: '8s'
+              }}>
                   <div className="w-full h-full bg-white rounded-full p-2">
-                    <img 
-                      src="https://i.postimg.cc/hhWwFGNb/IMG-20250526-WA0000.jpg"
-                      alt="Burgu Abhilash"
-                      className="w-full h-full object-cover rounded-full shadow-2xl"
-                    />
+                    <img src="https://i.postimg.cc/hhWwFGNb/IMG-20250526-WA0000.jpg" alt="Burgu Abhilash" className="w-full h-full object-cover rounded-full shadow-2xl" />
                   </div>
                 </div>
                 
@@ -150,7 +133,9 @@ const Hero = () => {
                 </div>
                 
                 {/* Orbiting Elements */}
-                <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
+                <div style={{
+                animationDuration: '20s'
+              }} className="absolute inset-0 ">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-emerald-400 rounded-full shadow-lg"></div>
                   <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 w-3 h-3 bg-violet-400 rounded-full shadow-lg"></div>
                   <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full shadow-lg"></div>
@@ -176,8 +161,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
