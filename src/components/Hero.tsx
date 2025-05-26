@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Mail, Phone, Linkedin, Download, Github, ArrowRight, Star, Code, Zap } from 'lucide-react';
 const Hero = () => {
@@ -102,10 +103,8 @@ const Hero = () => {
             <div className="relative">
               {/* Main Profile Circle */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                {/* Animated Border */}
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-blue-500 to-violet-500 rounded-full p-1 animate-spin" style={{
-                animationDuration: '8s'
-              }}>
+                {/* Static Border */}
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-blue-500 to-violet-500 rounded-full p-1">
                   <div className="w-full h-full bg-white rounded-full p-2">
                     <img src="https://i.postimg.cc/hhWwFGNb/IMG-20250526-WA0000.jpg" alt="Burgu Abhilash" className="w-full h-full object-cover rounded-full shadow-2xl" />
                   </div>
@@ -133,9 +132,7 @@ const Hero = () => {
                 </div>
                 
                 {/* Orbiting Elements */}
-                <div style={{
-                animationDuration: '20s'
-              }} className="absolute inset-0 ">
+                <div className="absolute inset-0">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-emerald-400 rounded-full shadow-lg"></div>
                   <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 w-3 h-3 bg-violet-400 rounded-full shadow-lg"></div>
                   <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full shadow-lg"></div>
