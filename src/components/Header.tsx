@@ -33,11 +33,13 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-xl border-b border-emerald-100' : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold text-slate-800">
+          <div className={`text-xl font-bold transition-colors ${
+            isScrolled ? 'text-slate-800' : 'text-white'
+          }`}>
             BURGU ABHILASH
           </div>
           
@@ -47,7 +49,11 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-slate-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className={`transition-colors duration-200 font-medium hover:scale-105 ${
+                  isScrolled 
+                    ? 'text-slate-600 hover:text-emerald-600' 
+                    : 'text-white/80 hover:text-emerald-400'
+                }`}
               >
                 {item.label}
               </button>
@@ -56,7 +62,9 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-slate-800"
+            className={`md:hidden transition-colors ${
+              isScrolled ? 'text-slate-800' : 'text-white'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -65,12 +73,12 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg">
+          <div className="md:hidden mt-4 py-4 bg-white/95 backdrop-blur-lg rounded-lg shadow-xl border border-emerald-100">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 transition-colors duration-200"
+                className="block w-full text-left px-4 py-2 text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition-colors duration-200"
               >
                 {item.label}
               </button>

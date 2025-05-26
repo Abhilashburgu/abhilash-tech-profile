@@ -1,16 +1,32 @@
+
 import React from 'react';
 import { GraduationCap, Code, Target } from 'lucide-react';
+
 const About = () => {
-  return <section id="about" className="py-20 bg-white">
+  return (
+    <section id="about" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-blue-600 mx-auto"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
-          
+          <div className="flex justify-center">
+            <div className="relative">
+              <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-emerald-100 to-blue-100 p-1">
+                <img 
+                  src="https://i.postimg.cc/hhWwFGNb/IMG-20250526-WA0000.jpg"
+                  alt="Burgu Abhilash"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+              <div className="absolute -top-4 -right-4 bg-emerald-500 text-white p-3 rounded-xl shadow-lg">
+                <Code size={24} />
+              </div>
+            </div>
+          </div>
 
           {/* Content */}
           <div className="space-y-8">
@@ -25,10 +41,10 @@ const About = () => {
             </div>
 
             {/* Education */}
-            <div className="bg-slate-50 rounded-xl p-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200">
               <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <GraduationCap size={24} className="text-blue-600" />
+                <div className="p-2 bg-emerald-100 rounded-lg">
+                  <GraduationCap size={24} className="text-emerald-600" />
                 </div>
                 <h4 className="text-xl font-semibold text-slate-800">Education</h4>
               </div>
@@ -40,10 +56,10 @@ const About = () => {
             </div>
 
             {/* Mission */}
-            <div className="bg-blue-50 rounded-xl p-6">
+            <div className="bg-gradient-to-r from-emerald-50 to-blue-50 rounded-xl p-6 border border-emerald-200">
               <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <Target size={24} className="text-blue-600" />
+                <div className="p-2 bg-emerald-100 rounded-lg">
+                  <Target size={24} className="text-emerald-600" />
                 </div>
                 <h4 className="text-xl font-semibold text-slate-800">Mission</h4>
               </div>
@@ -55,6 +71,8 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default About;
