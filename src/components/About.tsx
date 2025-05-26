@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { GraduationCap, Code, Target } from 'lucide-react';
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-white">
+  return <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">About Me</h2>
@@ -13,19 +10,7 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-72 h-72 bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl flex items-center justify-center shadow-lg">
-                <div className="text-slate-600 text-center">
-                  <div className="w-16 h-16 bg-slate-400 rounded-full mx-auto mb-3"></div>
-                  <p className="text-sm">Profile Picture</p>
-                </div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-100 rounded-2xl flex items-center justify-center">
-                <Code size={32} className="text-blue-600" />
-              </div>
-            </div>
-          </div>
+          
 
           {/* Content */}
           <div className="space-y-8">
@@ -70,8 +55,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
