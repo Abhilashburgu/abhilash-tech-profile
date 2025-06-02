@@ -19,7 +19,10 @@ const ContactForm = () => {
     setIsLoading(true);
 
     try {
-      // Send email using EmailJS with proper error handling
+      // Initialize EmailJS with your public key first
+      emailjs.init('o5FiYVIs0rDZYGbXa');
+
+      // Send email using your service ID and template ID
       const result = await emailjs.send(
         'service_i5r25gq',
         'template_7ari1kr',
@@ -28,8 +31,7 @@ const ContactForm = () => {
           from_email: formData.email,
           message: formData.message,
           to_email: 'abhilashburgu27@gmail.com'
-        },
-        'o5FiYVIs0rDZYGbXa'
+        }
       );
 
       console.log('Email sent successfully:', result);
