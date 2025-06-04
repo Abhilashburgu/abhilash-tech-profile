@@ -19,7 +19,7 @@ const ContactForm = () => {
   // EmailJS configuration
   const PUBLIC_KEY = 'o5FiYVIs0rDZYGbXa';
   const SERVICE_ID = 'service_i5r25gq';
-  const TEMPLATE_ID = 'template_7ari1kr';
+  const TEMPLATE_ID = 'template_7vqcagg';
 
   // Initialize EmailJS when component mounts
   useEffect(() => {
