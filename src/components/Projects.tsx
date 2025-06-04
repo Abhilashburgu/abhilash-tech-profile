@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Shield, FileText, Utensils, ExternalLink, Github } from 'lucide-react';
+import { Shield, Code, Database, ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [{
     title: "Honeypot Based Security Approach",
@@ -10,21 +11,21 @@ const Projects = () => {
     githubUrl: "https://github.com/Abhilashburgu/Honeypot-based-security-approch",
     features: ["Advanced threat detection mechanisms", "Real-time hacker activity monitoring", "Comprehensive vulnerability analysis", "Automated security reporting"]
   }, {
-    title: "Curfew e-Pass Generate System",
-    description: "Web-based system for managing and issuing administrative curfew passes with automated data processing.",
-    icon: FileText,
-    technologies: ["Web Development", "Data Processing", "Administrative Systems"],
+    title: "OGW (Orion Gateway Application)",
+    description: "Gateway application for telecom operations with comprehensive API management and microservices architecture.",
+    icon: Code,
+    technologies: ["Spring Boot", "Java", "MySQL", "REST APIs", "Microservices"],
     color: "from-blue-400 to-blue-600",
     githubUrl: null,
-    features: ["Automated pass generation workflow", "Administrative approval system", "Real-time status tracking", "Secure data management"]
+    features: ["API gateway development and management", "Microservices architecture implementation", "Database integration with MySQL", "RESTful web services development", "Performance optimization and monitoring"]
   }, {
-    title: "Excess Food Management System",
-    description: "Automates food collection and distribution with minimal manual oversight.",
-    icon: Utensils,
-    technologies: ["Automation", "Resource Management", "Social Impact"],
+    title: "O2A-Open 2 Activation SKY Application",
+    description: "Service activation system for SKY services with robust database management and API integration capabilities.",
+    icon: Database,
+    technologies: ["Java", "Spring Boot", "MySQL", "REST APIs", "Service Integration"],
     color: "from-green-400 to-green-600",
-    githubUrl: "https://github.com/Abhilashburgu/Excess-food-mangment",
-    features: ["Intelligent food redistribution", "Automated collection scheduling", "Waste reduction analytics", "Community impact tracking"]
+    githubUrl: null,
+    features: ["Automated service activation workflows", "Comprehensive database management", "API integration and validation", "Real-time service monitoring", "Error handling and logging systems"]
   }];
   return <section id="projects" className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
@@ -32,7 +33,7 @@ const Projects = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Featured Projects</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Innovative solutions addressing real-world challenges through technology
+            Professional solutions and innovative projects spanning security, telecommunications, and enterprise applications
           </p>
         </div>
 
@@ -75,7 +76,7 @@ const Projects = () => {
                 {/* Action Buttons */}
                 <div className="flex gap-3">
                   <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
-                    <ExternalLink size={16} className="https://github.com/Abhilashburgu/Excess-food-mangment" />
+                    <ExternalLink size={16} />
                     <span className="text-sm font-medium">View Details</span>
                   </button>
                   {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors duration-200">
